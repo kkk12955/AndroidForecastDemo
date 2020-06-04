@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/FragmentA">
+
+    <fragment
+        android:id="@+id/FragmentA"
+        android:name="com.kk.demo.fragment.FragmentA"
+        android:label=" "
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_FragmentA_to_FragmentB"
+            app:destination="@id/FragmentB" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentB"
+        android:name="com.kk.demo.fragment.FragmentB"
+        android:label=" "
+        tools:layout="@layout/fragment_b" >
+        <argument
+            android:name="startTime"
+            app:argType="string" />
+        <argument android:name="endTime"
+            app:argType="string" />
+        <argument android:name="value"
+            app:argType="string" />
+    </fragment>
+</navigation>
